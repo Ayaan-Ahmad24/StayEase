@@ -1,6 +1,6 @@
 const Message = require('../models/message.model');
 
-module.exports.createMessage = async (req, res) => {
+module.exports.addMessage = async (req, res) => {
     const { name, email, message } = req.body;
 
     try {

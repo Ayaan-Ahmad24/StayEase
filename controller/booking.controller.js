@@ -2,7 +2,7 @@ const Booking = require("../models/booking.model");
 const Room = require("../models/room.model");
 const mongoose = require("mongoose");
 
-module.exports.requestBooking = async (req, res) => {
+module.exports.Bookrequest = async (req, res) => {
   try {
     const { guestId, roomId, arrivalDate, departureDate } = req.body;
     console.log("Room ID:", roomId);
@@ -55,7 +55,7 @@ module.exports.requestBooking = async (req, res) => {
   }
 };
 
-module.exports.handleBookingRequest = async (req, res) => {
+module.exports.bookingHandling = async (req, res) => {
   try {
     const { bookingId, status } = req.body;
 

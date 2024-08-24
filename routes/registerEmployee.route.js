@@ -1,12 +1,12 @@
-const { employeeRegister,getAllEmployees } = require('../controller/registerEmployee.controller')
+const { employeeRegisteration,AllEmployees } = require('../controller/registerEmployee.controller')
 const express = require('express')
 const router = express.Router()
 
 router.get('/employeeregister', (req, res) => {
     res.status(200).send('Hello from Employee page')
 })
-router.post('/employeeregister', employeeRegister)
+router.post('/employeeregister', employeeRegisteration)
 
-router.get('/employees', getAllEmployees);
+router.get('/employees', AllEmployees);
 
 module.exports = router

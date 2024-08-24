@@ -1,6 +1,6 @@
 const NewEmployee = require('../models/employee.model');
 
-module.exports.employeeRegister = async (req, res) => {
+module.exports.employeeRegisteration = async (req, res) => {
     try {
         const data = req.body
         const EmployeeData = new NewEmployee({
@@ -20,7 +20,7 @@ module.exports.employeeRegister = async (req, res) => {
     }
 }
 
-module.exports.getAllEmployees = async (req, res) => {
+module.exports.AllEmployees = async (req, res) => {
     try {
         const employees = await NewEmployee.find();
         res.status(200).json({ success: true, employees });
